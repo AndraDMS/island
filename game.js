@@ -64,7 +64,7 @@ function generate() {
 			}
 
 			mag/=flatten;
-			mag-=Math.pow(dist(i-(w/2),j-(h/2))/(h/3),9);
+			mag-=Math.pow(dist(i-(w/2),j-(h/2))/(h/3),7);
 
 			var output = defColour;
 			//if (mag>=60) output = "rgb(" + mag + "," + mag + "," + mag + ")";
