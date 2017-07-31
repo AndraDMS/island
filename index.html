@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Cigaro</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+
+	<body>
+	<div class="centerbox">
+		<canvas width="1200" height="800" id="world"></canvas>
+	</div>
+	<div id="options">
+		<div class="optionBar">
+			<div class="optionBarHead">Pixel Size</div>
+			<div class="optionBarField">
+				<textarea class="smallTextBox" id="f_PixelSize">2</textarea>
+			</div>
+		</div>
+	</div>
+	<div id="refresh" onclick="refresh()">REFRESH</div>
+	<script src="perlin.js"></script>
+	<script src="game.js"></script>
+	</body>
+</html>
