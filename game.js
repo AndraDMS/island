@@ -115,8 +115,8 @@ function cloud() {
 		}
 	}
 	this.draw = function () {
-		var x_ = Math.floor(this.p.v[0]);
-		var y_ = Math.floor(this.p.v[1]);
+		var x_ = pixelSize*Math.floor(this.p.v[0]/pixelSize);
+		var y_ = pixelSize*Math.floor(this.p.v[1]/pixelSize);
 		ctxCloud.fillStyle = "#fff";
 		ctxCloud.fillRect(x_+wCloud/2,y_+hCloud/2,pixelSize,pixelSize);
 	}
