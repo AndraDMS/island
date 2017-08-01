@@ -7,7 +7,12 @@
 	<body>
 	<div class="centerbox">
 		<canvas width="768" height="768" id="world"></canvas>
+		<canvas width="768" height="768" id="world_Temp"></canvas>
 		<canvas width="900" height="900" id="world_Clouds"></canvas>
+		<canvas width="768" height="768" id="world_Cursor"></canvas>
+	</div>
+	<div id="world_Info">
+		
 	</div>
 	<div id="options">
 		<div class="optionBar">
@@ -16,9 +21,19 @@
 				<textarea class="smallTextBox" id="f_PixelSize">2</textarea>
 			</div>
 		</div>
+		<div class="optionBar">
+			<div class="optionBarHead" onclick="toggleTemperature()" style="cursor:pointer">Temperature</div>
+		</div>
 	</div>
 	<div id="refresh" onclick="refresh()">REFRESH</div>
 	<script src="perlin.js"></script>
+
+	<script src="cursor.js"></script>
+	<script src="world_cloud.js"></script>
+	<script src="world_temperature.js"></script>
+	<script src="world_humidity.js"></script>
+	<script src="world_gen.js"></script>
+
 	<script src="game.js"></script>
 	</body>
 </html>
