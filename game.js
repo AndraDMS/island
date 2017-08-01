@@ -153,6 +153,8 @@ function cloudAnimTemp() {
 }
 
 generate();
+addClouds(1000);// Remove
+cloudAnimTemp();// later
 
 function vect(v) {
 	this.v = (v?v:[])
