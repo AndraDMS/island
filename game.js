@@ -123,7 +123,7 @@ function cloud() {
 }
 
 function windspeed(x,y,t) {
-	var windDir = noise.simplex3(x,y,t)*Math.PI
+	var windDir = noise.simplex3(x/300,y/300,t)*Math.PI
 	var windMag = noise.simplex3(x/300+6000,y/300+2000,t)/10
 	return [windMag*Math.cos(windDir),windMag*Math.sin(windDir)]
 }
