@@ -1,18 +1,18 @@
-canvas = document.getElementById('world');
-ctx = canvas.getContext('2d');
-w = canvas.width;
-h = canvas.height;
+canvas = g.cnv.wrld;
+ctx = g.ctx("wrld");
+//w = g.cnvW("wrld");
+//h = g.cnvH("wrld");
 
-var imgdata = ctx.getImageData(0,0, w, h);
+var imgdata = g.cnvImg("wrld");
 var imgdatalen = imgdata.data.length;
 
-pixelSize = 2;
+//pixelSize = 2;
 
 seed = Math.ceil(Math.random()*65536)
 noise.seed(seed);
 
 generate();
-addClouds(2000);// Remove
+addClouds(1000);// Remove
 cloudAnimTemp();// later
 
 function vect(v) {

@@ -1,6 +1,6 @@
 
-canvasCloud = document.getElementById('world_Clouds');
-ctxCloud = canvasCloud.getContext('2d');
+canvasCloud = g.cnv.cld;
+ctxCloud = g.ctx("cld");
 wCloud = canvasCloud.width;
 hCloud = canvasCloud.height;
 

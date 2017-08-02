@@ -17,7 +17,12 @@ canvasCursor.addEventListener('mousemove', function(e) {
 	x_ -= wCursor/2;
 	y_ -= hCursor/2;
 
-	document.getElementById("world_Info").innerHTML = "X: " + x_ + ", Y: " + y_ + "</br> Altitude: " + Math.round(1000*heightMap(x_,y_,1.3,1.2,500,30,-1000,1.5)) + "m</br> Avg Temp: " + temperatureMap(x_,y_,1.3,1.2,500,30,-1000,1.5).toFixed(3) + "C";
+	var alt_ = g.clMap.alt(x_,y_);//
+	var temp_ = g.clMap.temp(x_,y_);
+	var hum_ = g.clMap.hum(x_,y_);
+	var biome_ = checkBiome(temp_,hum_);
+
+	document.getElementById("world_Info").innerHTML = "X: " + x_ + ", Y: " + y_ + "</br> Altitude: " + Math.round(1000*alt_) + "m</br> Avg Temp: " + temp_.toFixed(3) + "C</br> Humidity: " + hum_.toFixed(3) + "%</br> Biome: " + biome_;
 })
 
 canvasCursor.addEventListener('mouseout', function(e) {

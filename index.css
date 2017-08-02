@@ -11,13 +11,18 @@ html, body {
 	background-color:#1d3258;
 }
 
-#world, #world_Cursor {
+#imgBank {
+	opacity:1;
+	pointer-events: none;
+}
+
+#world, #world_Cursor, #world_Weather {
 	left:50%;
 	top:50%;
 	position:fixed;
 	transform: translate(-50%,-50%);
 }
-#world_Temp {
+#world_Temp, #world_Hum {
 	left:50%;
 	top:50%;
 	position:fixed;
